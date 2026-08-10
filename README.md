@@ -58,13 +58,16 @@
 
 <img width="1296" height="1043" alt="桌機寬度1200px_0" src="https://github.com/user-attachments/assets/a6349c20-e564-48f3-b5ad-23523bbd1ed2" />
 ---
+
 * **📱 平板寬度 (Tablet View)**：景點卡片自動調整為**雙欄並排佈局**，兼顧閱讀舒適度與網頁排版。
 
 <img width="814" height="1037" alt="平板寬度768px_0" src="https://github.com/user-attachments/assets/ecb1f7f6-80a6-417a-827c-4db80f2e45d3" />
 ---
+
 * **📞 手機寬度 (Mobile View)**：選單自動收納為單一的**漢堡選單按鈕**，景點列表則改為單欄垂直排列，方便單手滑動操作。
 <img width="641" height="723" alt="手機寬度375px_0" src="https://github.com/user-attachments/assets/f75a193c-d172-445e-acb8-671f447eb549" />
 ---
+
 ### 🔍 景點詳細資訊彈窗 (Attraction Detail Modal)
 採用彈出式視窗 (Modal) 技術，整合圖示元素分欄清晰呈現：開放時間、門票資訊、聯絡電話、景點地址以及深度文字介紹，並內建 Google 地圖導航快捷鍵。
 <img width="897" height="841" alt="景點詳細內容_0" src="https://github.com/user-attachments/assets/7ecfdcac-57b5-4a4b-9dcd-0c2aecdab830" />
