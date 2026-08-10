@@ -1,6 +1,6 @@
 # 🌸 花蓮觀光導覽系統 (Hualien Travel Guide System)
 
-一個以花蓮旅遊為主題的觀光導覽響應式網站，整合前台景點流暢瀏覽、精緻彈窗詳情、個人化收藏管理，以及功能完備的後台資料管理系統。
+一個以花蓮旅遊為主題的觀光導覽響應式網站，整合前台景點流暢瀏覽、精緻彈窗詳情、個人化收藏管理，以及擁有身分驗證機制的後台資料管理系統。
 
 本專案採用前後端分離架構，使用輕量網頁技術搭配 **Flask** 後端核心與 **SQLite** 關聯式資料庫，實作了完整的 **CRUD** 資料管理與後台管理員功能。
 
@@ -8,10 +8,10 @@
 
 ## 📌 專案介紹
 
-本專案主要提供使用者與系統管理員一個直覺、流暢的花蓮旅遊導覽暨維護平台。
+本專案主要提供使用者與系統管理員一個直覺、流暢且安全的花蓮旅遊導覽暨維護平台。
 
 * **對於一般遊客**：能透過精美、高質感的介面跨裝置探索花蓮各地景點，並可即時將心儀的景點加入個人收藏清單，提供客製化的行程規劃輔助。
-* **對於系統管理員**：提供專屬的圖表維護後台。管理員可一站式進行景點資料的動態新增、編輯與刪除，並能透過視覺化統計即時掌握全區的景點數據分佈。
+* **對於系統管理員**：系統內建身分驗證防護牆。管理員必須先通過登入驗證，才能進入專屬的圖表維護後台，進行景點資料的動態新增、編輯、刪除與全區數據分佈統計。
 
 ---
 
@@ -29,17 +29,20 @@
 - **收藏內二次搜尋**：收藏頁面貼心提供專屬搜尋框，方便使用者在眾多收藏中二次過濾。
 - **時間戳記追蹤**：卡片底部會精準顯示該景點被加入收藏的具體時間。
 
+### 🔐 管理員安全登入 (`admin_login.html`)
+- **權限防護隔離**：在進入管理後台前設定登入驗證關卡，非授權使用者無法直接存取維護頁面。
+- **後端狀態管理**：後端結合 Flask Session 機制，嚴格校驗管理員的登入狀態與通行憑證。
+- **友善導航連結**：介面貼心提供「返回花蓮觀光導覽」捷徑，方便管理員隨時返回前台測試或瀏覽。
+
 ### 🛠️ 景點資料維護後台 (`manage.html`)
 - **高效率雙欄佈局**：在同一畫面中完美串聯「資料新增表單」與「清單管理表格」，大幅提升維護效率。
 - **智慧表單校驗**：欄位具備紅色星號（`*`）必填提示與灰色預設引導文字，支援一鍵確認新增與表單清空。
 - **即時總量統計**：後台即時動態顯示系統內目前建立的景點總筆數（如：目前共 11 個景點）。
 - **全功能 CRUD 維護**：管理列表內建「📝 編輯」與「🗑️ 刪除」一鍵式快速操作按鈕，與後端資料庫全面連動。
-<img width="1727" height="984" alt="景點管理_0" src="https://github.com/user-attachments/assets/781ed4ee-a7c5-4633-aa69-367a363eb879" />
 
 ### 📊 數據視覺化統計
 - **動態長條圖表**：後台成功整合前端圖表控制元件，將資料庫中的景點按「行政區（鄉鎮市）」進行分組歸納。
 - **數據即時回饋**：直觀展示各區域的景點分佈數量，協助掌握旅遊資源密度。
-<img width="1876" height="713" alt="統計圖表_0" src="https://github.com/user-attachments/assets/48788174-b9f1-4672-8777-4c7de4a76d8e" />
 
 ---
 
@@ -47,41 +50,40 @@
 
 ### 🌅 景點清單頁 - 頂端視覺橫幅
 採用高品質的花蓮海濱落日風景搭配動態標語，營造出沉浸式的旅遊導覽入口。
-<img width="1911" height="1028" alt="首頁_0" src="https://github.com/user-attachments/assets/3c2a7a95-b89c-4d5a-8cdb-59c0623ff420" />
+<img width="1911" height="1028" alt="首頁_0" src="https://github.com/user-attachments/assets/e1138011-50f8-4816-b380-b981e6df8469" />
 
 ### 📱 跨裝置響應式網頁設計 (RWD Support)
 本系統前端介面具備完整的 RWD 適應能力，針對不同裝置的螢幕寬度進行了專屬的佈局優化：
 * **🖥️ 桌機寬度 (Desktop View)**：景點列表自動切換為**流暢的三欄並排卡片**，頂端導覽列呈現完整的寬螢幕文字選單，視覺感開闊、平衡。
 
-<img width="1296" height="1043" alt="桌機寬度1200px_0" src="https://github.com/user-attachments/assets/132e1b7a-79cd-4fe3-8eef-928ded3a1801" />
-
+<img width="1296" height="1043" alt="桌機寬度1200px_0" src="https://github.com/user-attachments/assets/a6349c20-e564-48f3-b5ad-23523bbd1ed2" />
 ---
 * **📱 平板寬度 (Tablet View)**：景點卡片自動調整為**雙欄並排佈局**，兼顧閱讀舒適度與網頁排版。
 
-<img width="814" height="1037" alt="平板寬度768px_0" src="https://github.com/user-attachments/assets/336915ed-d210-4611-8c11-2b1a0f8efb85" />
-
+<img width="814" height="1037" alt="平板寬度768px_0" src="https://github.com/user-attachments/assets/ecb1f7f6-80a6-417a-827c-4db80f2e45d3" />
 ---
 * **📞 手機寬度 (Mobile View)**：選單自動收納為單一的**漢堡選單按鈕**，景點列表則改為單欄垂直排列，方便單手滑動操作。
-
-<img width="641" height="723" alt="手機寬度375px_0" src="https://github.com/user-attachments/assets/5459e62f-a691-4fd7-9b97-662077d7a88d" />
-
-
+<img width="641" height="723" alt="手機寬度375px_0" src="https://github.com/user-attachments/assets/f75a193c-d172-445e-acb8-671f447eb549" />
+---
 ### 🔍 景點詳細資訊彈窗 (Attraction Detail Modal)
 採用彈出式視窗 (Modal) 技術，整合圖示元素分欄清晰呈現：開放時間、門票資訊、聯絡電話、景點地址以及深度文字介紹，並內建 Google 地圖導航快捷鍵。
-
-<img width="897" height="841" alt="景點詳細內容_0" src="https://github.com/user-attachments/assets/8379fc53-0183-403d-ae65-1a08ad732081" />
+<img width="897" height="841" alt="景點詳細內容_0" src="https://github.com/user-attachments/assets/7ecfdcac-57b5-4a4b-9dcd-0c2aecdab830" />
 
 ### ❤️ 我的收藏頁面 (`favorite.html`)
 即時顯示目前收藏清單，具備動態計數、收藏內搜尋框以及明確的時間戳記紀錄。
-<img width="1843" height="1025" alt="我的收藏_0" src="https://github.com/user-attachments/assets/92e3ebf6-69a0-4097-89b3-449a4cfebd86" />
+<img width="1843" height="1025" alt="我的收藏_0" src="https://github.com/user-attachments/assets/a2878769-45fd-4086-a98b-1312cd1814d8" />
 
-<img width="1289" height="846" alt="{C5289472-4810-4FE1-B8FF-1A465D15734C}" src="https://github.com/user-attachments/assets/bd3f182a-e080-4cde-b7ab-e204cb16edca" />
+### 🔐 管理員安全登入頁面 (`admin_login.html`)
+採用高質感的雙欄卡片風格，左側展示「探索花蓮，山海之間的美好」專案品牌，右側提供內建圖示的「管理員帳號」與「管理員密碼」安全輸入表單。
+<img width="1268" height="796" alt="管理者登入畫面" src="https://github.com/user-attachments/assets/748bbc06-34df-4d57-bdbe-707f20a1929f" />
 
 ### 🛠️ 景點資料管理後台 (`manage.html`)
 高效率雙欄管理介面，左側為新增表單，右側為內建「編輯/刪除」與專屬搜尋框的景點管理清單。
+<img width="1727" height="984" alt="景點管理_0" src="https://github.com/user-attachments/assets/6a7b25cc-6045-42c2-bbca-41586a120a0c" />
 
 ### 📊 資料視覺化統計與專業頁尾
 利用直觀的長條圖（Bar Chart）動態呈現花蓮各個鄉鎮區域（如：壽豐鄉、吉安鄉等）目前的景點數據。下方整合深色專業頁尾，包含快速連結與聯絡資訊。
+<img width="1876" height="713" alt="統計圖表_0" src="https://github.com/user-attachments/assets/d864c93d-7a54-456e-a995-e344a999da45" />
 
 ---
 
@@ -208,14 +210,14 @@
 
 ### Frontend
 - **HTML5 / CSS3 / JavaScript (ES6+)**：核心前端骨架與基礎樣式。
-- **Vue.js**：實現雙向資料綁定，動態渲染景點卡片、搜尋過濾、分頁及收藏狀態。
+- **Vue.js**：實現雙向資料綁定，動態渲染景點卡片、搜尋過濾、分頁、登入表單綁定及收藏狀態。
 - **Bootstrap**：提供響應式柵格系統 (Grid) 與 Modal 彈窗元件。
 - **Data Visualization Library**：後台報表數據視覺化渲染。
 
 ### Backend
 - **Python 3**：核心開發語言。
 - **Flask**：輕量級 Web 框架，提供路由派發與建立 RESTful API。
-- **Session 管理**：實作管理員安全登入與狀態狀態追蹤。
+- **Session 管理**：實作管理員安全登入與狀態憑證管理，進行後台路由重導向攔截保護。
 
 ### Database
 - **SQLite**：內嵌式關聯型資料庫，負責景點與收藏資料的安全持久化。
