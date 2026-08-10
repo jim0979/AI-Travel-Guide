@@ -34,10 +34,12 @@
 - **智慧表單校驗**：欄位具備紅色星號（`*`）必填提示與灰色預設引導文字，支援一鍵確認新增與表單清空。
 - **即時總量統計**：後台即時動態顯示系統內目前建立的景點總筆數（如：目前共 11 個景點）。
 - **全功能 CRUD 維護**：管理列表內建「📝 編輯」與「🗑️ 刪除」一鍵式快速操作按鈕，與後端資料庫全面連動。
+<img width="1727" height="984" alt="景點管理_0" src="https://github.com/user-attachments/assets/781ed4ee-a7c5-4633-aa69-367a363eb879" />
 
 ### 📊 數據視覺化統計
 - **動態長條圖表**：後台成功整合前端圖表控制元件，將資料庫中的景點按「行政區（鄉鎮市）」進行分組歸納。
 - **數據即時回饋**：直觀展示各區域的景點分佈數量，協助掌握旅遊資源密度。
+<img width="1876" height="713" alt="統計圖表_0" src="https://github.com/user-attachments/assets/48788174-b9f1-4672-8777-4c7de4a76d8e" />
 
 ---
 
@@ -45,18 +47,26 @@
 
 ### 🌅 景點清單頁 - 頂端視覺橫幅
 採用高品質的花蓮海濱落日風景搭配動態標語，營造出沉浸式的旅遊導覽入口。
+<img width="1911" height="1028" alt="首頁_0" src="https://github.com/user-attachments/assets/3c2a7a95-b89c-4d5a-8cdb-59c0623ff420" />
 
 ### 📱 跨裝置響應式網頁設計 (RWD Support)
 本系統前端介面具備完整的 RWD 適應能力，針對不同裝置的螢幕寬度進行了專屬的佈局優化：
 * **🖥️ 桌機寬度 (Desktop View)**：景點列表自動切換為**流暢的三欄並排卡片**，頂端導覽列呈現完整的寬螢幕文字選單，視覺感開闊、平衡。
+<img width="1296" height="1043" alt="桌機寬度1200px_0" src="https://github.com/user-attachments/assets/132e1b7a-79cd-4fe3-8eef-928ded3a1801" />
+
 * **📱 平板寬度 (Tablet View)**：景點卡片自動調整為**雙欄並排佈局**，兼顧閱讀舒適度與網頁排版。
+<img width="814" height="1037" alt="平板寬度768px_0" src="https://github.com/user-attachments/assets/336915ed-d210-4611-8c11-2b1a0f8efb85" />
+
 * **📞 手機寬度 (Mobile View)**：選單自動收納為單一的**漢堡選單按鈕**，景點列表則改為單欄垂直排列，方便單手滑動操作。
+<img width="641" height="723" alt="手機寬度375px_0" src="https://github.com/user-attachments/assets/5459e62f-a691-4fd7-9b97-662077d7a88d" />
 
 ### 🔍 景點詳細資訊彈窗 (Attraction Detail Modal)
 採用彈出式視窗 (Modal) 技術，整合圖示元素分欄清晰呈現：開放時間、門票資訊、聯絡電話、景點地址以及深度文字介紹，並內建 Google 地圖導航快捷鍵。
+<img width="897" height="841" alt="景點詳細內容_0" src="https://github.com/user-attachments/assets/8379fc53-0183-403d-ae65-1a08ad732081" />
 
 ### ❤️ 我的收藏頁面 (`favorite.html`)
 即時顯示目前收藏清單，具備動態計數、收藏內搜尋框以及明確的時間戳記紀錄。
+<img width="1843" height="1025" alt="我的收藏_0" src="https://github.com/user-attachments/assets/92e3ebf6-69a0-4097-89b3-449a4cfebd86" />
 
 ### 🛠️ 景點資料管理後台 (`manage.html`)
 高效率雙欄管理介面，左側為新增表單，右側為內建「編輯/刪除」與專屬搜尋框的景點管理清單。
