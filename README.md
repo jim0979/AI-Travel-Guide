@@ -75,6 +75,8 @@
 即時顯示目前收藏清單，具備動態計數、收藏內搜尋框以及明確的時間戳記紀錄。
 <img width="1843" height="1025" alt="我的收藏_0" src="https://github.com/user-attachments/assets/92e3ebf6-69a0-4097-89b3-449a4cfebd86" />
 
+<img width="1289" height="846" alt="{C5289472-4810-4FE1-B8FF-1A465D15734C}" src="https://github.com/user-attachments/assets/bd3f182a-e080-4cde-b7ab-e204cb16edca" />
+
 ### 🛠️ 景點資料管理後台 (`manage.html`)
 高效率雙欄管理介面，左側為新增表單，右側為內建「編輯/刪除」與專屬搜尋框的景點管理清單。
 
