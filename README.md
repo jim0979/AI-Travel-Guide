@@ -52,19 +52,23 @@
 ### 📱 跨裝置響應式網頁設計 (RWD Support)
 本系統前端介面具備完整的 RWD 適應能力，針對不同裝置的螢幕寬度進行了專屬的佈局優化：
 * **🖥️ 桌機寬度 (Desktop View)**：景點列表自動切換為**流暢的三欄並排卡片**，頂端導覽列呈現完整的寬螢幕文字選單，視覺感開闊、平衡。
+* 
 <img width="1296" height="1043" alt="桌機寬度1200px_0" src="https://github.com/user-attachments/assets/132e1b7a-79cd-4fe3-8eef-928ded3a1801" />
 
 
 * **📱 平板寬度 (Tablet View)**：景點卡片自動調整為**雙欄並排佈局**，兼顧閱讀舒適度與網頁排版。
+* 
 <img width="814" height="1037" alt="平板寬度768px_0" src="https://github.com/user-attachments/assets/336915ed-d210-4611-8c11-2b1a0f8efb85" />
 
 
 * **📞 手機寬度 (Mobile View)**：選單自動收納為單一的**漢堡選單按鈕**，景點列表則改為單欄垂直排列，方便單手滑動操作。
+* 
 <img width="641" height="723" alt="手機寬度375px_0" src="https://github.com/user-attachments/assets/5459e62f-a691-4fd7-9b97-662077d7a88d" />
 
 
 ### 🔍 景點詳細資訊彈窗 (Attraction Detail Modal)
 採用彈出式視窗 (Modal) 技術，整合圖示元素分欄清晰呈現：開放時間、門票資訊、聯絡電話、景點地址以及深度文字介紹，並內建 Google 地圖導航快捷鍵。
+
 <img width="897" height="841" alt="景點詳細內容_0" src="https://github.com/user-attachments/assets/8379fc53-0183-403d-ae65-1a08ad732081" />
 
 ### ❤️ 我的收藏頁面 (`favorite.html`)
